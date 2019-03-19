@@ -1,1 +1,1 @@
-# Minimalist-Dynamic-Site
+# Fluid-Minimalism-Site
