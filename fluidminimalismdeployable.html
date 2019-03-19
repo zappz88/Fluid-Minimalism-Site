@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="fluidminimalismcssdeployable.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id='main'>
+        <ul id='leftSideBar'>
+            <p id='currentProjects'>Current Projects</p>
+            <label id='leftSideBarBtns'>
+                <li id='item1'>TimeClock</li>
+                <li id='item2'><a href=''>Pamphlet Site</a></li>
+                <li><a href="">Parallax Site</a></li>
+            </label>
+        </ul>
+
+        <div id='greeting'>
+            <h1 id='h1'>Home</h1>
+            <p id='p1'><a href="https://github.com/zappz88">Git</a></p>
+            <p id='p2'>About</p>
+            <p id='p3'>Contact</p>
+        </div> 
+
+        <ul id='rightSideBar'>
+            <p id='sites'>Sites</p>
+            <label id='rightSideBarBtns'>
+                <li id='item4'><a href='http://myskillstimeclock.epizy.com/?i=1'>TimeClock</a></li>
+                <li id='item5'><a href='http://myskillsweatherapp.epizy.com/?i=1'>WeatherApp</a></li>
+                <li><a href="">PamphletSite</a></li>
+            </label>
+        </ul>
+    </div>
+
+    <div id='info'>
+        <p id='description'></p>
+    </div>
+
+    <script>
+
+        var homeInfo = "This page is a simple demonstration of UI development skills applying a fluid minimalist design. Items used are HTML, CSS, and jQuery with heavy use of keyframe animations to provide the fluid look.";
+        var gitInfo = "Contains all projects and functions developed by myself.";
+        var aboutInfo = "An up and coming programmer with skills in HTML, CSS, SQL, Javascript, PHP, and other languages and libraries with priorities in front-end development.";
+        var contactInfo = "Contact info not currently available.";
+        var leftListItem1 = "A project using HTML, CSS, Javascript, PHP, Ajax, and SQL to demo an attempt at full stack web development.";
+        var leftListItem2 = "A simple pamphlet site using HTML and CSS."
+
+        $(document).ready(function(){
+            $('body').addClass('openEyes');
+        });
+
+        $(document).ready(function(){
+            $('#h1').addClass('slideDown');
+        });
+
+        $(document).ready(function(){
+            $('#p1').addClass('slideRight');
+        });
+
+        $(document).ready(function(){
+            $('#p2').addClass('slideLeft');
+        });
+
+        $(document).ready(function(){
+            $('#p3').addClass('slideUp');
+        });
+
+        $('#h1').bind('mouseenter mouseleave', function(){
+            $(this).removeClass('slideDown');
+            $(this).toggleClass('bounce');
+            $(this).toggleClass('pointer');
+            $(this).toggleClass('textShadow');
+            })
+
+        $('#p1').bind('mouseenter mouseleave', function(){
+            $(this).removeClass('slideRight');
+            $(this).toggleClass('bounce');
+            $(this).toggleClass('pointer');
+            $(this).toggleClass('textShadow');
+            })
+
+        $('#p1').bind('click', function(){
+            $(this).addClass('comingThrough');
+        })
+
+        $('#p2').bind('mouseenter mouseleave', function(){
+            $(this).removeClass('slideLeft');
+            $(this).toggleClass('bounce');
+            $(this).toggleClass('pointer');
+            $(this).toggleClass('textShadow');
+            })
+
+        $('#p3').bind('mouseenter mouseleave', function(){
+            $(this).removeClass('slideUp');
+            $(this).toggleClass('bounce');
+            $(this).toggleClass('pointer');
+            $(this).toggleClass('textShadow');
+            })
+
+        $('#leftSideBar').bind('mouseenter mouseleave', function(){
+            $(this).toggleClass('easeInRight');
+            })
+
+        $('#rightSideBar').bind('mouseenter mouseleave', function(){
+            $(this).toggleClass('easeInLeft');
+            })
+        
+        $('li').bind('mouseenter mouseleave', function(){
+            $(this).toggleClass('easeIn');
+            $(this).toggleClass('pointer');
+            })
+
+        $('#leftSideBarBtns').bind('click', function(){
+            $('#leftSideBar').addClass('spinOut');
+        })
+
+        $('#rightSideBarBtns').bind('click', function(){
+            $('#rightSideBar').addClass('spinOut');
+        })
+
+        $('#h1').bind('mouseenter mouseleave', function(){
+            $('#description').toggleClass('show');
+            $('#description').text(homeInfo);
+        });
+
+        $('#p1').bind('mouseenter mouseleave', function(){
+            $('#description').toggleClass('show');
+            $('#description').text(gitInfo);
+        });
+
+        $('#p2').bind('mouseenter mouseleave', function(){
+            $('#description').toggleClass('show');
+            $('#description').text(aboutInfo);
+        });
+
+        $('#p3').bind('mouseenter mouseleave', function(){
+            $('#description').toggleClass('show');
+            $('#description').text(contactInfo);
+        });
+
+        $('#item1').bind('mouseenter mouseleave', function(){
+            $('#description').toggleClass('show');
+            $('#description').text(leftListItem1);
+        });
+
+        $('#item2').bind('mouseenter mouseleave', function(){
+            $('#description').toggleClass('show');
+            $('#description').text(leftListItem2);
+        });
+
+
+        
+    </script>
+
+
+  
+</body>
+</html>

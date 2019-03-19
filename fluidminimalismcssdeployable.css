@@ -1,0 +1,347 @@
+body{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;}
+
+h1 a, p a{
+    color: black;
+    padding: 20px;
+}
+
+#main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 750px;
+    height: 350px;
+    margin-top:15vh;
+}
+
+#h1{ 
+    padding: 0px;
+}
+
+#p1, #p2, #p3{
+    padding: 20px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 15px;
+}
+
+li{
+    border: solid 2px black;
+    padding: 15px;
+    margin: 10px;
+    width: 150px;
+    text-align: center;
+}
+
+li:active{
+    background-color: black;
+    color: white;
+}
+
+li a{
+    text-decoration: none;
+    color: black;
+    padding: 15px 30px;
+}
+
+li a:active{
+    color: white;
+}
+
+#leftSideBar{
+    display: inline-block;
+    margin-right: 15%;
+}
+
+#rightSideBar{
+    display: inline-block;
+    margin-left: 15%;
+}
+
+#greeting{
+    display: inline-block;
+    text-align: center;
+}
+
+#info{
+    width: 50vw;
+    height: 100px;
+    text-align: center;
+}
+
+#description{
+    color: white;
+}
+
+
+
+/*Classes*/
+.pointer{
+    cursor: pointer;
+}
+
+.textShadow{
+    text-shadow: 0px 0px 10px grey;
+}
+
+
+
+/*Animation Classes*/
+.spinOut{
+    animation: spinOut 1s ease 0s normal forwards running;
+    pointer-events: none;
+}
+
+.slideDown{
+    animation: slideDown 1s ease 0s normal forwards running;
+}
+
+.slideRight{
+    animation: slideRight 1s ease 0s normal forwards running;
+}
+
+.slideLeft{
+    animation: slideLeft 1s ease 0s 1 normal forwards running;
+}
+
+.slideUp{
+    animation: slideUp 1s ease 0s 1 normal forwards running;
+}
+
+.bounce{
+    animation: bounce 0.45s ease 0s infinite alternate none running;
+}
+
+.easeIn{
+    animation: easeIn 0.25s linear 0s 1 normal forwards running;
+}
+
+.easeInLeft{
+    animation: easeInLeft 0.25s linear 0s 1 normal forwards running;
+}
+
+.easeInRight{
+    animation: easeInRight 0.25s linear 0s 1 normal forwards running;
+}
+
+.comingThrough{
+    animation: comingThrough 1s ease 1 normal forwards running;
+    pointer-events: none;
+}
+
+.openEyes{
+    animation: openEyes 3s ease 0s 1 normal forwards running;
+}
+
+.show{
+    animation: show 1s ease 0s 1 normal forwards running;
+}
+
+
+/*Keyframe Animations*/
+
+@keyframes slideDown{
+    0%{
+        -moz-transform: translateY(-1000px);
+        -ms-transform: translateY(-1000px);
+        -webkit-transform: translateY(-1000px);
+    }
+    100%{
+
+    }
+}
+
+@keyframes slideRight{
+    0%{
+        -moz-transform: translateX(-1000px);
+        -ms-transform: translateX(-1000px);
+        -webkit-transform: translateX(-1000px);
+    }
+    100%{
+
+    }
+}
+
+@keyframes slideLeft{
+    0%{
+        -moz-transform: translateX(1000px);
+        -ms-transform: translateX(1000px);
+        -webkit-transform: translateX(1000px);
+    }
+    100%{
+
+    }
+}
+
+@keyframes slideUp{
+    0%{
+        -moz-transform: translateY(1000px);
+        -ms-transform: translateY(1000px);
+        -webkit-transform: translateY(1000px);
+    }
+    100%{
+
+    }
+}
+
+@keyframes easeInRight{
+    0%{
+    
+    }
+    100%{
+        -moz-transform: scale(1.1,1.1);
+        -ms-transform: scale(1.1,1.1);
+        -webkit-transform: scale(1.1,1.1);
+        box-shadow: -10px 10px 10px 10px grey;
+    }
+}
+
+@keyframes easeInLeft{
+    0%{
+    
+    }
+    100%{
+        -moz-transform: scale(1.1,1.1);
+        -ms-transform: scale(1.1,1.1);
+        -webkit-transform: scale(1.1,1.1);
+        box-shadow: 10px 10px 10px 10px grey;
+    }
+}
+
+@keyframes easeIn{
+    0%{
+    
+    }
+    100%{
+        -moz-transform: scale(1.1,1.1);
+        -ms-transform: scale(1.1,1.1);
+        -webkit-transform: scale(1.1,1.1);
+        box-shadow: 0px 0px 10px 5px grey;
+    }
+}
+
+@keyframes bounce{
+    0%{
+
+    }
+    100%{
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+    }
+}
+
+@keyframes spinOut{
+    0%{
+
+    }
+    50%{
+        transform: rotateY(360deg);
+        -moz-transform: rotateY(360deg);
+        -webkit-transform: rotateY(360deg);
+    }
+    75%{
+        -moz-transform: translateY(35px);
+        -ms-transform: translateY(35px);
+        -webkit-transform: translateY(35px);
+    }
+    100%{
+        -moz-transform: translateY(-1000px);
+        -ms-transform: translateY(-1000px);
+        -webkit-transform: translateY(-1000px);
+    }
+}
+
+@keyframes comingThrough{
+    0%{
+        position: absolute;
+    }
+    50%{
+        -moz-transform: translateY(200px);
+        -ms-transform: translateY(200px);
+        -webkit-transform: translateY(200px);
+        -moz-transform: translateX(-80px);
+        -ms-transform: translateX(-80px);
+        -webkit-transform: translateX(-80px);
+        font-size: 100px;
+        position: absolute;
+    }
+    100%{
+        -moz-transform: translateX(-2000px);
+        -ms-transform: translateX(-2000px);
+        -webkit-transform: translateX(-2000px);
+        -moz-transform: translateY(-1000px);
+        -ms-transform: translateY(-1000px);
+        -webkit-transform: translateY(-1000px);
+        font-size: 200px;
+        position: absolute;
+    }
+}
+
+@keyframes openEyes{
+    0%{
+        background-color: black;
+    }
+    100%{
+        background-color: white;
+    }
+}
+
+@keyframes show{
+    0%{
+        transform: translateY(20px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(20px);
+        color: rgb(116, 115, 115);
+        visibility: visible;
+    }
+}
+
+
+
+/*Optimize for Mobile*/
+
+@media screen and (max-width: 568px){
+    body{
+        overflow: scroll;
+    }
+    #main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 45vh;
+        font-size: 95%;
+    }
+    #greeting{
+        order: 1;
+        margin: auto;
+    }
+
+    #leftSideBar{
+        order: 2;
+        margin: auto;
+    }
+
+    #rightSideBar{
+        order: 3;
+        margin: auto auto 25vh;
+    }
+
+    #info{
+        display: none;
+    }
+}
+
