@@ -1,3 +1,8 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
 body{
     overflow: hidden;
     display: flex;
@@ -17,7 +22,7 @@ h1 a, p a{
     align-items: center;
     width: 750px;
     height: 350px;
-    margin-top:15vh;
+    margin-top:10%;
 }
 
 #h1{ 
@@ -49,7 +54,7 @@ li:active{
 li a{
     text-decoration: none;
     color: black;
-    padding: 15px 30px;
+    padding: 15px;
 }
 
 li a:active{
@@ -262,27 +267,18 @@ li a:active{
 
 @keyframes comingThrough{
     0%{
-        position: absolute;
     }
     50%{
+        font-size: 200px;
         -moz-transform: translateY(200px);
         -ms-transform: translateY(200px);
         -webkit-transform: translateY(200px);
-        -moz-transform: translateX(-80px);
-        -ms-transform: translateX(-80px);
-        -webkit-transform: translateX(-80px);
-        font-size: 100px;
-        position: absolute;
     }
     100%{
-        -moz-transform: translateX(-2000px);
-        -ms-transform: translateX(-2000px);
-        -webkit-transform: translateX(-2000px);
         -moz-transform: translateY(-1000px);
         -ms-transform: translateY(-1000px);
         -webkit-transform: translateY(-1000px);
         font-size: 200px;
-        position: absolute;
     }
 }
 
@@ -322,8 +318,9 @@ li a:active{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 45vh;
+        margin-top: 50%;
         font-size: 95%;
+        height: 750px;
     }
     #greeting{
         order: 1;
